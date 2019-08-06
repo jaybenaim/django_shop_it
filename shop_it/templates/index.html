@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% block title %}
+{% endblock %}
+{% block content %}
+
+    <ul> <h2> Stores: </h2> 
+        {% for store in stores %}
+            <li> {{store}} </li> 
+        {% endfor %}
+    </ul> 
+    <ul> <h2> Sections: </h2> 
+        {% for section in sections %}
+            <li> {{section}} </li> 
+        {% endfor %}
+    </ul> 
+    
+    <ul> <h2> Aisles: </h2> 
+        {% for aisle in aisles %}
+            <li> {{aisle}} </li> 
+        {% endfor %}
+    </ul> 
+
+    <ul> <h2> Shelves: </h2> 
+        {% for shelf in shelves %}
+            <li> {{shelf}} </li> 
+        {% endfor %}
+    </ul> 
+    <ul><h2> Products: </h2> 
+        {% for product in products %}
+            <li> {{product}} </li> 
+        {% endfor %}
+    </ul> 
+    <ul> <h2> Users: </h2> 
+        {% for user in users %}
+            <li> {{user}} </li> 
+        {% endfor %}
+    </ul> 
+    
+
+{% endblock %}
+  
