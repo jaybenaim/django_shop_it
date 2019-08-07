@@ -26,11 +26,15 @@ class Aisle(models.Model):
         return self.name
 
 class Shelf(models.Model): 
-    shelf_third = models.CharField(max_length=225, default="Front-Third") 
-    product_id = models.ManyToManyField('Product', related_name='products') 
+    shelf_third = models.ManyToManyField('ShelfSection', related_name='shelf_sections')
 
     def __str__(self):
         return self.shelf_third
+
+class ShelfSection(models.Model): 
+    shelf_third = models.CharField(max_length=225, default="Front-Third")
+    product_id = models.ManyToManyField('Product', related_name='products') 
+
 
 class Product(models.Model):
     name = models.CharField(max_length=225)
